@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94698863-fa62-40cb-8d6d-53dc6d1df22d" name="默认的" comment="" />
+    <list default="true" id="94698863-fa62-40cb-8d6d-53dc6d1df22d" name="默认的" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Pzhan/p_host.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -138,6 +142,9 @@
       <find>tags</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -154,6 +161,7 @@
         <option value="$PROJECT_DIR$/Pzhan/settings.py" />
         <option value="$PROJECT_DIR$/Pzhan/transCookie.py" />
         <option value="$PROJECT_DIR$/Pzhan/spiders/new_art.py" />
+        <option value="$PROJECT_DIR$/Pzhan/p_host.txt" />
       </list>
     </option>
   </component>
@@ -163,7 +171,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="158" />
     <option name="y" value="75" />
     <option name="width" value="1685" />
@@ -188,6 +196,7 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -216,18 +225,6 @@
               <item name="Pzhan" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pzhan" type="462c0819:PsiDirectoryNode" />
               <item name="Pzhan" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pzhan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pzhan" type="462c0819:PsiDirectoryNode" />
-              <item name="Pzhan" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Pzhan" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Pzhan" type="462c0819:PsiDirectoryNode" />
-              <item name="Pzhan" type="462c0819:PsiDirectoryNode" />
-              <item name="spiders" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Pzhan" type="b2602c69:ProjectViewProjectNode" />
@@ -374,7 +371,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="158" y="75" width="1685" height="916" extended-state="1" />
+    <frame x="158" y="75" width="1685" height="916" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24923077" sideWeight="0.4953765" order="0" side_tool="false" content_ui="combo" />
@@ -437,14 +434,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Pzhan/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="33" column="35" lean-forward="false" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pzhan/正则测试.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -859,6 +848,14 @@
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pzhan/p_host.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="701">
+          <caret line="191" column="43" lean-forward="false" selection-start-line="191" selection-start-column="43" selection-end-line="191" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
