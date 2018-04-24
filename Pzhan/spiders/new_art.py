@@ -8,6 +8,14 @@ import json
 
 
 class NewArtSpider(scrapy.Spider):
+    # 这里需要填写
+    # 画师ID
+    artis_id = 648285
+    # 可用的P站账号
+    login_account = '123@qq.com'
+    # 该账号的密码
+    login_pwd = '123456'
+
     name = 'new_art'
     allowed_domains = ['pixiv.net']
     start_urls = ['https://www.pixiv.net/bookmark.php']
@@ -26,9 +34,10 @@ class NewArtSpider(scrapy.Spider):
         'Cookie': 'p_ab_id=3; p_ab_id_2=5; user_language=zh; c_type=24; a_type=0; b_type=1; device_token=61862d21a20d2ecd9c719f27173e436f; module_orders_mypage=[{"name":"recommended_illusts","visible":true},{"name":"everyone_new_illusts","visible":true},{"name":"following_new_illusts","visible":true},{"name":"mypixiv_new_illusts","visible":true},{"name":"fanbox","visible":true},{"name":"featured_tags","visible":true},{"name":"contests","visible":true},{"name":"user_events","visible":true},{"name":"sensei_courses","visible":true},{"name":"spotlight","visible":true},{"name":"booth_follow_items","visible":true}]; __utma=235335808.1272705403.1503209995.1510793447.1510797554.15; __utmz=235335808.1510797554.15.14.utmcsr=baidu|utmccn=(organic)|utmcmd=organic|utmcct=/link; __utmv=235335808.|2=login ever=yes=1^3=plan=normal=1^5=gender=male=1^6=user_id=5174309=1^9=p_ab_id=3=1^10=p_ab_id_2=5=1^11=lang=zh=1; _td=61db3ab3-fb5f-43f2-a585-a7aa18997f9c; PHPSESSID=8df12eedbff10cefb943450a0eacc771; _gat=1; _gat_UA-76252338-4=1; __utma=75212034.2078753273.1510793488.1510793488.1510821192.2; __utmb=75212034.4.7.1510821200795; __utmc=75212034; __utmz=75212034.1510821192.2.2.utmcsr=pixiv.net|utmccn=(referral)|utmcmd=referral|utmcct=/; _ga=GA1.2.1272705403.1503209995; _gid=GA1.2.1939517424.1510793490; _ga=GA1.3.1272705403.1503209995; _gid=GA1.3.1939517424.1510793490; login_bc=1',
         'X-Requested-With': 'XMLHttpRequest'
     }
+
     # 这里填用户的作品页面
     # artistUrl = 'https://www.pixiv.net/member_illust.php?id=4147414'
-    artistUrl = 'https://www.pixiv.net/member_illust.php?id=648285'
+    artistUrl = 'https://www.pixiv.net/member_illust.php?id=%s' % str(artis_id)
 
     # 开始请求登录页面
     def start_requests(self):
@@ -52,9 +61,9 @@ class NewArtSpider(scrapy.Spider):
                                               'post_key': authenticity_token,
                                               # 模拟登陆
                                               # 账号
-                                              'pixiv_id': '123@qq.com',
+                                              'pixiv_id': self.login_account,
                                               # 密码
-                                              'password': '123456',
+                                              'password': self.login_pwd,
                                               'source': 'pc',
                                               'ref': 'wwwtop_accounts_index',
                                               'return_to': 'https://www.pixiv.net/bookmark.php',
@@ -113,7 +122,7 @@ class NewArtSpider(scrapy.Spider):
         if realNum == 0:
             realNum = 1
         print("总作品数:", picNums)
-        print("总页数:", realNum+1)
+        print("总页数:", realNum + 1)
         for i in range(1, realNum + 1):
             # print(response.url+"&type=all&p="+str(i))
             yield Request(url=response.url + "&type=all&p=" + str(i),
@@ -188,7 +197,7 @@ class NewArtSpider(scrapy.Spider):
                     # print(item)
                     # print(item['artist'])
                     yield item
-                # pass
+                    # pass
 
         except IndexError as ie:
             # print(response.url)
